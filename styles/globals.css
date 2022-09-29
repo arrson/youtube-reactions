@@ -8,6 +8,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: #303035;
 }
 
 a {
@@ -17,34 +18,6 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-} */
-
-table {
-  color: #333;
-  background: white;
-  font-size: 12pt;
-  border-collapse: collapse;
-}
-table thead th,
-table tfoot th {
-  background: #f2f2f2;
-  border-radius: 4px;
-}
-table th,
-table td {
-  padding: 0.5em;
-  text-align: left;
-  border: 2px solid #fff;
 }
 
 .video {

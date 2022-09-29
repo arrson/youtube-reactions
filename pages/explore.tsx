@@ -112,6 +112,7 @@ const DraggableColumnHeader: FC<{
       ref={dropRef}
       colSpan={header.colSpan}
       style={{ opacity: isDragging ? 0.5 : 1 }}
+      className="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase bg-gray-50"
     >
       <div ref={previewRef} className="flex">
         <button ref={dragRef}>
@@ -143,10 +144,7 @@ const Table = ({
   const table = useReactTable<Reaction>({
     data,
     columns,
-    state: {
-      sorting,
-      columnOrder,
-    },
+    state: { sorting, columnOrder },
     onColumnOrderChange: setColumnOrder,
     onSortingChange: setSorting,
     getCoreRowModel: getCoreRowModel(),
@@ -154,7 +152,7 @@ const Table = ({
   });
 
   return (
-    <table>
+    <table className="min-w-full divide-y divide-gray-200">
       <thead>
         {table.getHeaderGroups().map((headerGroup) => (
           <tr key={headerGroup.id}>
@@ -188,11 +186,14 @@ const Table = ({
           </tr>
         ))}
       </thead>
-      <tbody>
+      <tbody className="bg-white divide-y divide-gray-200">
         {table.getRowModel().rows.map((row) => (
           <tr key={row.id}>
             {row.getVisibleCells().map((cell) => (
-              <td key={cell.id}>
+              <td
+                key={cell.id}
+                className="px-6 py-4 text-sm font-medium leading-5 text-gray-900 whitespace-no-wrap"
+              >
                 {flexRender(cell.column.columnDef.cell, cell.getContext())}
               </td>
             ))}
@@ -203,6 +204,20 @@ const Table = ({
   );
 };
 
+// todo: row actions depending on user permissions
+// edit, report, delete
+// {
+//   id: "action",
+//   header: "",
+//   accessorKey: "action",
+//   fixed: true,
+//   cell: (props: any) => (
+//     <span>
+//       <button onClick={(e) => console.log(props.row.original)}>Edit</button>
+//     </span>
+//   ),
+// },
+
 const Wrapper = () => {
   const [columns] = React.useState(() => [...defaultColumns]);
 
@@ -211,7 +226,7 @@ const Wrapper = () => {
     getReactions
   );
 
-  if (isLoading) return "Loading...";
+  if (isLoading) return null;
   // if (error) return "An error has occurred: " + error.message;
 
   return (
