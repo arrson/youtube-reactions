@@ -1,0 +1,9 @@
+.video {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  margin-right: 4px;
+  border-radius: 8px;
+}

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -15,7 +19,7 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -23,4 +27,33 @@ a {
     color: white;
     background: black;
   }
+} */
+
+table {
+  color: #333;
+  background: white;
+  font-size: 12pt;
+  border-collapse: collapse;
+}
+table thead th,
+table tfoot th {
+  background: #f2f2f2;
+  border-radius: 4px;
+}
+table th,
+table td {
+  padding: 0.5em;
+  text-align: left;
+  border: 2px solid #fff;
+}
+
+.video {
+  display: flex;
+  align-items: center;
+}
+
+.videoImage {
+  margin-right: 8px;
+  border-radius: 8px;
+  flex: 0 0 60px;
 }
