@@ -103,11 +103,11 @@ const Header = () => {
                 <div className="flex items-center flex-shrink-0">
                   <img
                     src="/logo.svg"
-                    alt="Youtube Reactions Logo"
+                    alt="YouTube Reactions Logo"
                     className="w-8 h-8"
                   />
                   <span className="ml-2 text-gray-200 text-semibold">
-                    Youtube Reactions
+                    YouTube Reactions
                   </span>
                 </div>
                 <div className="hidden md:block">

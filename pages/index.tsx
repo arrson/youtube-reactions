@@ -257,7 +257,7 @@ const Home = () => {
                 <span className="block xl:inline">Discover reactions</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">
-                Easily find and follow your favorite youtube reactions.
+                Easily find and follow your favorite YouTube reactions.
               </p>
             </div>
           </main>
@@ -276,7 +276,7 @@ const Home = () => {
               Available when you need it
             </h2>
             <p className="mt-4 text-gray-500">
-              The chrome extension adds reactions to your youtube video
+              The chrome extension adds reactions to your YouTube video
               recommendations so you can view reactions to the videos
               you&apos;re currently watching.
             </p>
@@ -300,7 +300,7 @@ const Home = () => {
           >
             <img
               src="/mockup.png"
-              alt="Screenshot of reaction in youtube recommendations panel."
+              alt="Screenshot of reaction in YouTube recommendations panel."
             />
           </motion.div>
         </div>
